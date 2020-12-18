@@ -1,7 +1,8 @@
 var vueObj = new Vue({
     el: '#app',
     data: {
-        message: 'Sotiris Fanou'
+        message: 'Sotiris Fanou',
+        color: 'Red'
     }
 });
 
