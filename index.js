@@ -1,10 +1,19 @@
 var vueObj = new Vue({
     el: '#app',
     data: {
-        message: 'Sotiris Fanou',
-        color: 'Red'
-    }
+        msgVar: 'Sotiris Fanou',
+        colorVar: 'Red',
+        colorsArr: ['red','green','blue']
+    }, //ends data
+    methods: {
+
+        myFunction(){
+            this.colorsArr.push(this.colorVar);
+            this.colorVar = "";
+        }//ends myFunction()
+
+    }//ends methods
 });
 
-//vueObj.message = "New sotiris message";
+vueObj.msgVar = "New sotiris message";
 
