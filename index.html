@@ -7,6 +7,11 @@
     <!-- <script type = "text/javascript" src = "js/vue.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
+    <style>
+        .red-class {color:red;}
+        .blue-class {color: blue;}
+    </style>
+
 
 
 </head>
@@ -15,11 +20,11 @@
     <div id="app" style="text-align:left;">
         <h1>{{ msgVar }}</h1>
 
-        <p>{{ colorVar }}</p>
+        <p>{{ colorVar }}</p> 
 
         <input v-model="msgVar"><br>
 
-        <p><span v-bind:title="msgVar">
+        <p><span v-bind:title="msgVar" v-bind:class="styleVar">
                 Hover your mouse over me for a few seconds
                 to see my dynamically bound title!
             </span></p>

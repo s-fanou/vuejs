@@ -3,13 +3,16 @@ var vueObj = new Vue({
     data: {
         msgVar: 'Sotiris Fanou',
         colorVar: 'Red',
-        colorsArr: ['red','green','blue']
+        colorsArr: ['red','green','blue'],
+        styleVar: 'red-class'
     }, //ends data
     methods: {
 
         myFunction(){
-            this.colorsArr.push(this.colorVar);
-            this.colorVar = "";
+            //this.colorsArr.push(this.colorVar);
+            //this.colorVar = "";
+            this.styleVar = 'blue-class';
+
         }//ends myFunction()
 
     }//ends methods
