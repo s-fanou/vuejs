@@ -4,6 +4,7 @@ Vue.component("task-item", {
 });
 
 Vue.component("task-list", {
+    //the template must have only one root element therefore we enclose it in a <div></div>
     template: "<div><task-item v-for='oneTask in mytasks' v-text='oneTask.task'></task-item></div>",
   
     // for components the data must be a function which returns a JS object
