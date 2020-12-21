@@ -24,7 +24,7 @@
 
         <input v-model="msgVar"><br>
 
-        <p><span v-bind:title="msgVar" v-bind:class="styleVar">
+        <p><span v-bind:title="msgVar" v-bind:class="{ 'red-class' : changeStyleVar }">
                 Hover your mouse over me for a few seconds
                 to see my dynamically bound title!
             </span></p>
@@ -36,7 +36,7 @@
         </ul></p>
 
 
-        <p><button v-on:click="myFunction">Add to List</button></p>
+        <p><button v-on:click="myFunction">Toggle Style</button></p>
 
     </div>
 

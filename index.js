@@ -4,18 +4,20 @@ var vueObj = new Vue({
         msgVar: 'Sotiris Fanou',
         colorVar: 'Red',
         colorsArr: ['red','green','blue'],
-        styleVar: 'red-class'
-    }, //ends data
+        styleVar: 'red-class',
+        changeStyleVar: false
+    }, //ends data object
     methods: {
 
         myFunction(){
             //this.colorsArr.push(this.colorVar);
             //this.colorVar = "";
-            this.styleVar = 'blue-class';
+            //this.styleVar = 'blue-class';
+            this.changeStyleVar = !this.changeStyleVar;
 
         }//ends myFunction()
 
-    }//ends methods
+    }//ends methods object
 });
 
 vueObj.msgVar = "New sotiris message";
