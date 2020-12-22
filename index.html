@@ -23,8 +23,14 @@
 
 <body>
     <div id="app" style="text-align:left;">
-
+        <!-- task-list is a Vue component that I made -->
         <task-list></task-list>
+         
+        <!-- message is another Vue component shown in Laracasts video 9 
+        title and body are custom made props -->
+        <message title="Title of my message" body="Body of my message."></message>
+
+        <message title="Title of message TWO" body="Body of message Two."></message>
 
         <p><span v-bind:title="msgVar" v-bind:class="{ 'red-class' : changeStyleVar }">
                 Hover your mouse over me for a few seconds
