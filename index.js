@@ -1,6 +1,8 @@
 /*
 https://bulma.io/documentation/components/modal/
-
+@click="$emit('close')" this triggers a custom build event 
+called 'close' which is caught in my HTML page on my sot-modal 
+custom made component.
 */
 Vue.component("sot-modal", {
   template: `<div class="modal is-active">
@@ -12,30 +14,10 @@ Vue.component("sot-modal", {
                     </p>
                 </div>
             </div>
-            <button class="modal-close is-large" aria-label="close"></button>
+            <button class="modal-close is-large" @click="$emit('close')" aria-label="close"></button>
             </div>`,
 }); //ends sot-modal
 
-/* It seems that props are used for Vue components for which the data is not passed 
-using the Vue data object in JS but rather the data is assigned directly in the HTML file 
-like this: <message title="Title of my message" body="Body of my message."></message> */
-Vue.component("message", {
-  props: ["title", "body"],
-  //the instructor uses a css library to make the message template
-  //beautiful I just use a <p></p> for demo purposes
-  // v-show="false" hides the element, v-show="true" shows the element
-  template: `<div v-show="isVisible">
-                  <hr>
-                  <p>{{ title }}</p>
-                  <p>{{ body }}</p>
-                  <button type="button" @click="isVisible = false">HIDE</button>
-                  <hr>
-              </div>`,
-
-  data: function () {
-    return { isVisible: true };
-  },
-});
 
 var vueObj = new Vue({
   el: "#app",
@@ -46,5 +28,8 @@ var vueObj = new Vue({
     myFunction() {
       this.showSotModal = true;
     }, //ends myFunction()
+    sotCloseModal(){
+        this.showSotModal = false;
+    }
   }, //ends methods object
 });
