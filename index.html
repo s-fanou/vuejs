@@ -22,7 +22,10 @@
         To communicate between components we use events. @close="" (or v-on:close)  
         'close' is not a build in event but I will create a custom build event called close in 
         my component in the JS file. Therefore, @close will catch my custom build event 'close' -->
-        <sot-modal v-show="showSotModal" @close="sotCloseModal"></sot-modal>
+        <sot-modal v-show="showSotModal" @close="sotCloseModal">
+            The slot HTML tag which I used in the definition of this custom component makes it 
+            possible to add any text I like here and it will be presented on the page.
+        </sot-modal>
 
         <p><button v-on:click="myFunction">Show Modal</button></p>
 

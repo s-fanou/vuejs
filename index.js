@@ -9,9 +9,7 @@ Vue.component("sot-modal", {
             <div class="modal-background"></div>
             <div class="modal-content">
                 <div class="box">
-                    <p>
-                    This is my modal the unexamined life is not worth living!
-                    </p>
+                <slot></slot>
                 </div>
             </div>
             <button class="modal-close is-large" @click="$emit('close')" aria-label="close"></button>
