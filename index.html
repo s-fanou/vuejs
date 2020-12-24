@@ -18,20 +18,20 @@
 
 <body>
     <div id="app" style="text-align:left;">
-        <h1>{{ msgVar }}</h1>
+        <h1>{{ computedVar }}</h1>
 
         <p id="topP" v-text="colorVar"></p> 
 
-        <input v-model="msgVar"><br>
+        <input id="sotTextBox" v-model="computedProperty"><br>
         <!-- v-bind:class="{ the braces mean, evaluate what is inside }" dynamic binding, 
             if changeStyleVar == true then class='red-class'
         -->
-        <p><span v-bind:title="msgVar" v-bind:class="{ 'red-class' : changeStyleVar }">
+        <p><span id="sotSpan" v-bind:title="msgVar" v-bind:class="{ 'red-class' : changeStyleVar }">
                 Hover your mouse over me for a few seconds
-                to see my dynamically bound title!
+                to see my dynamically bound title! {{ computedP2 }}
             </span></p>
 
-        <textarea id="sotTextArea" v-model="colorVar"></textarea>         
+        <textarea id="sotTextArea" v-model="msgVar"></textarea>         
 
 
         <p><button v-on:click="myFunction">Toggle Style</button></p>
