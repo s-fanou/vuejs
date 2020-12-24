@@ -23,7 +23,9 @@
         <p>{{ colorVar }}</p> 
 
         <input v-model="msgVar"><br>
-
+        <!-- v-bind:class="{ the braces mean, evaluate what is inside }" dynamic binding, 
+            if changeStyleVar == true then class='red-class'
+        -->
         <p><span v-bind:title="msgVar" v-bind:class="{ 'red-class' : changeStyleVar }">
                 Hover your mouse over me for a few seconds
                 to see my dynamically bound title!
