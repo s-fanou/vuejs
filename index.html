@@ -20,7 +20,7 @@
     <div id="app" style="text-align:left;">
         <h1>{{ msgVar }}</h1>
 
-        <p>{{ colorVar }}</p> 
+        <p id="topP" v-text="colorVar"></p> 
 
         <input v-model="msgVar"><br>
         <!-- v-bind:class="{ the braces mean, evaluate what is inside }" dynamic binding, 
@@ -31,11 +31,7 @@
                 to see my dynamically bound title!
             </span></p>
 
-        <textarea v-model="colorVar"></textarea>
-
-        <p><ul>
-            <li v-for="color in colorsArr"> {{ color }}</li>
-        </ul></p>
+        <textarea id="sotTextArea" v-model="colorVar"></textarea>         
 
 
         <p><button v-on:click="myFunction">Toggle Style</button></p>
