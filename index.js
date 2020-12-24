@@ -17,6 +17,13 @@ var vueObj = new Vue({
 
   computed: {
     //these are the proper computed properties
+    incompletedTasks(){      
+        /* the below can also be written in ES6 syntax like this
+          return this.tasks.filter(task => !task.completed);*/
+        return this.tasks.filter(function (task){
+            return !task.completed;
+        });
+    },//ends incompletedTasks()
     computedVar: () => {
       return "computed var " + new Date();
     },
@@ -29,7 +36,8 @@ var vueObj = new Vue({
       return (
         "another computed P2 " + "shows 3 different ways to write functions"
       );
-    },
+    }
+
   }, // ends computed
 
   methods: {
