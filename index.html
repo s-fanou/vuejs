@@ -8,8 +8,13 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <style>
-        .red-class {color:red;}
-        .blue-class {color: blue;}
+        .red-class {
+            color: red;
+        }
+
+        .blue-class {
+            color: blue;
+        }
     </style>
 
 
@@ -20,9 +25,17 @@
     <div id="app" style="text-align:left;">
         <h1>{{ computedVar }}</h1>
 
-        <p id="topP" v-text="colorVar"></p> 
+        <p id="topP" v-text="colorVar"></p>
 
-        <input id="sotTextBox" v-model="computedProperty"><br>
+        Here is a list of my tasks:
+
+        <p>
+        <ul>
+            <li v-for="task in tasks" v-if="task.completed"> {{ task.desc}} </li>
+        </ul>
+        </p>
+
+        <label for="sotTextBox">This is my textBox: </label><input id="sotTextBox" v-model="computedProperty"><br>
         <!-- v-bind:class="{ the braces mean, evaluate what is inside }" dynamic binding, 
             if changeStyleVar == true then class='red-class'
         -->
@@ -31,7 +44,7 @@
                 to see my dynamically bound title! {{ computedP2 }}
             </span></p>
 
-        <textarea id="sotTextArea" v-model="msgVar"></textarea>         
+        <textarea id="sotTextArea" v-model="msgVar"></textarea>
 
 
         <p><button v-on:click="myFunction">Toggle Style</button></p>
