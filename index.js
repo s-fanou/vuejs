@@ -1,11 +1,7 @@
-Vue.component("task-item", {
-    //this component is included in the task-list component below
-  template: "<li></li>"
-});
 
 Vue.component("task-list", {
     //the template must have only one root element therefore we enclose it in a <div></div>
-    template: "<div><task-item v-for='oneTask in mytasks' v-text='oneTask.task'></task-item></div>",
+    template: "<div><li v-for='oneTask in mytasks' v-text='oneTask.task'></li></div>",
   
     // for components the data must be a function which returns a JS object
     //as compared to the data of the Vue object below which is a simple JS object

@@ -24,18 +24,10 @@
 <body>
     <div id="app" style="text-align:left;">
 
-        <!-- this is custom made component which I define in my JS file -->
+        <!-- this is a custom made component which I define in my JS file -->
         <task-list></task-list>
 
-        <p><span v-bind:title="msgVar" v-bind:class="{ 'red-class' : changeStyleVar }">
-                Hover your mouse over me for a few seconds
-                to see my dynamically bound title!
-            </span></p>
-
-        Enter some value into the textbox:<br>
-        <input v-model="msgVar"><br>
-
-        <p><button v-on:click="myFunction">Toggle Style</button></p>
+        <p><button v-on:click="myFunction">A button</button></p>
 
     </div>
 
