@@ -1,46 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <title>Sot learn VueJs</title>
-    <!-- necessary link to vue, either to local file or cdn remote  -->
-    <!-- <script type = "text/javascript" src = "js/vue.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-
-
-</head>
-
-<body>
-    <div id="app" style="text-align:left;">
-        <h1>{{ msgVar }}</h1>
-
-        <p>{{ colorVar }}</p>
-
-        <input v-model="msgVar"><br>
-
-        <p><span v-bind:title="msgVar">
-                Hover your mouse over me for a few seconds
-                to see my dynamically bound title!
-            </span></p>
-
-        <textarea v-model="colorVar"></textarea>
-
-        <p><ul>
-            <li v-for="color in colorsArr"> {{ color }}</li>
-        </ul></p>
-
-
-        <p><button v-on:click="myFunction">Add to List</button></p>
-
-    </div>
-
-    <div></div>
-
-    <script type="text/javascript" src="index.js"></script>
-
-</body>
-
-
-
+  <head>
+    <meta charset="utf-8">
+    <title>sot-app</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="/dist/build.js"></script>
+  </body>
 </html>
