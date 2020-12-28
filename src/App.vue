@@ -20,6 +20,7 @@
 </template>
 
 <script>
+/* this is code for the custom component whose template is above */
 export default {
   name: 'app',
   data () {
