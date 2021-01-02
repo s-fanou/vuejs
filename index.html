@@ -19,16 +19,20 @@
 
         <input v-model="msgVar"><br>
 
-        <p><span v-bind:title="msgVar">
+        <p>
+            <span v-bind:title="msgVar">
                 Hover your mouse over me for a few seconds
                 to see my dynamically bound title!
-            </span></p>
+            </span>
+        </p>
 
         <textarea v-model="colorVar"></textarea>
 
-        <p><ul>
+        <p>
+        <ul>
             <li v-for="color in colorsArr"> {{ color }}</li>
-        </ul></p>
+        </ul>
+        </p>
 
 
         <p><button v-on:click="myFunction">Add to List</button></p>
