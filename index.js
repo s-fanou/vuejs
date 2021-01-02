@@ -1,16 +1,18 @@
 
 Vue.component("task-list", {
     //the template must have only one root element therefore we enclose it in a <div></div>
-    template: "<div><li v-for='oneTask in mytasks' v-text='oneTask.task'></li></div>",
+    template: "<div v-bind:class='sotClass'><li v-for='oneTask in mytasks' v-text='oneTask.task'></li></div>",
   
     // for components the data must be a function which returns a JS object
     //as compared to the data of the Vue object below which is a simple JS object
     data: function () {
-      return { mytasks: [
+      return { 
+          mytasks: [
           {task: 'go to bank', complete: true},
           {task: 'go to supermarket', complete: false},
-          {task: 'go to pharmacy', complete: false}
-      ] };
+          {task: 'go to pharmacy', complete: false}  ],    
+          sotClass: 'red-class'
+            };
     },
   });
 
