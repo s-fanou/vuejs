@@ -1,7 +1,7 @@
 var vueObj = new Vue({
     el: '#app',
     data: {
-        msgVar: 'Sotiris Fanou',
+        msgVar: 'This is the msgVar value',
         colorVar: 'Red',
         colorsArr: ['red','green','blue']
     }, //ends data
@@ -15,5 +15,5 @@ var vueObj = new Vue({
     }//ends methods
 });
 
-vueObj.msgVar = "New sotiris message";
+//vueObj.msgVar = "New sotiris message";
 
