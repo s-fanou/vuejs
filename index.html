@@ -26,9 +26,11 @@
 
         <textarea v-model="colorVar"></textarea>
 
-        <p><ul>
+        <p>
+        <ul>
             <li v-for="color in colorsArr"> {{ color }}</li>
-        </ul></p>
+        </ul>
+        </p>
 
 
         <p><button v-on:click="myFunction">Add to List</button></p>
