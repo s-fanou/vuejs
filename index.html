@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Sot learn VueJs</title>
     <!-- necessary link to vue, either to local file or cdn remote  -->
     <!-- <script type = "text/javascript" src = "js/vue.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
+    <style>
+        .red-class {
+            color: red;
+        }
+
+        .blue-class {
+            color: blue;
+        }
+    </style>
+
+
+
 </head>
+
 <body>
-<div id = "app" style = "text-align:center;">
-    <h1>{{ message }}</h1>
-    <input v-model = "message"><br>
-    <p><span v-bind:title = "message">
-        Hover your mouse over me for a few seconds
-        to see my dynamically bound title!
-    </span></p>
-</div>
+    <div id="app" style="text-align:left;">
+        <!-- task-list is a Vue component that I made -->
+        <task-list></task-list>
+         
+        <!-- message is another Vue component shown in Laracasts video 9 
+        title and body are custom made props -->
+        <message title="Title of my message" body="Body of my message."></message>
 
-<div></div>
+        <message title="Title of message TWO" body="Body of message Two."></message>
 
-<script type = "text/javascript" src="index.js"></script>
+        <p><span v-bind:title="msgVar" v-bind:class="{ 'red-class' : changeStyleVar }">
+                Hover your mouse over me for a few seconds
+                to see my dynamically bound title!
+            </span></p>
+
+        Enter some value into the textbox:<br>
+        <input v-model="msgVar"><br>
+
+        <p><button v-on:click="myFunction">Toggle Style</button></p>
+
+    </div>
+
+    <div></div>
+
+    <script type="text/javascript" src="index.js"></script>
+
 </body>
+
+
+
 </html>
