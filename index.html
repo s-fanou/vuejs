@@ -8,8 +8,13 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <style>
-        .red-class {color:red;}
-        .blue-class {color: blue;}
+        .red-class {
+            color: red;
+        }
+
+        .blue-class {
+            color: blue;
+        }
     </style>
 
 
@@ -20,20 +25,24 @@
     <div id="app" style="text-align:left;">
         <h1>{{ msgVar }}</h1>
 
-        <p>{{ colorVar }}</p> 
+        <p>{{ colorVar }}</p>
 
         <input v-model="msgVar"><br>
 
-        <p><span v-bind:title="msgVar" v-bind:class="styleVar">
+        <p>
+            <span v-bind:title="msgVar" v-bind:class="styleVar">
                 Hover your mouse over me for a few seconds
                 to see my dynamically bound title!
-            </span></p>
+            </span>
+        </p>
 
         <textarea v-model="colorVar"></textarea>
 
-        <p><ul>
+        <p>
+        <ul>
             <li v-for="color in colorsArr"> {{ color }}</li>
-        </ul></p>
+        </ul>
+        </p>
 
 
         <p><button v-on:click="myFunction">Add to List</button></p>
