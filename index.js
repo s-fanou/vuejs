@@ -2,7 +2,7 @@ var vueObj = new Vue({
     el: '#app',
     data: {
         msgVar: 'This is the msgVar value',
-        colorVar: 'Red',
+        colorVar: 'RED',
         colorsArr: ['red','green','blue']
     }, //ends data
     methods: {
