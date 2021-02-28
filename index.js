@@ -61,4 +61,4 @@ var vueObj = new Vue({
   }, //ends methods object
 });
 
-vueObj.msgVar = "New sotiris message";
+//vueObj.msgVar = "New sotiris message";
