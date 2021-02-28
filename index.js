@@ -2,7 +2,7 @@ var vueObj = new Vue({
   el: "#app",
   data: {
     //the msgVar and colorVar are computed but actually the proper way is below
-    msgVar: "Sotiris Fanou " + new Date(),
+    msgVar: "Sotiris Fanou ".toUpperCase(),
     colorVar: "the color var is " + "Red",
     colorsArr: ["red", "green", "blue"],
     styleVar: "red-class",
@@ -30,7 +30,7 @@ var vueObj = new Vue({
     computedProperty() {
       //let surVar = "fanou";
       //surVar1 = surVar.toUpperCase();
-      return "sotiris " + "fanou".toUpperCase();
+      return "sotiris".toUpperCase();
     },
     computedP2: function () {
       return (

@@ -23,7 +23,7 @@
 
 <body>
     <div id="app" style="text-align:left;">
-        <h1>{{ computedVar }}</h1>
+        <h1>{{ msgVar }}</h1>
 
         <p id="topP" v-text="colorVar"></p>
 
@@ -43,7 +43,7 @@
         </ul>
         </p>
 
-        <label for="sotTextBox">This is my textBox: </label><input id="sotTextBox" v-model="computedProperty"><br>
+        <label for="sotTextBox">This is my textBox: </label><input id="sotTextBox" v-model="msgVar"><br>
         <!-- v-bind:class="{ the braces mean, evaluate what is inside }" dynamic binding, 
             if changeStyleVar == true then class='red-class'
         -->
